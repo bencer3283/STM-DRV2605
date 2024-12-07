@@ -1,0 +1,8 @@
+*.launch
+*.*project
+*.ld
+.settings
+Debug
+Drivers
+Startup
+Common
