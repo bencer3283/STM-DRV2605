@@ -613,8 +613,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		tx_status = HAL_UART_Transmit(huart, bits, 9, 100);
 	}
 	else {
+		// load internal vibration effect to the 1st waveform sequencer register
 		i2c_write_buffer[0] = rx;
 		HAL_I2C_Mem_Write(&hi2c1, 0b10110100, 0x04, 1, i2c_write_buffer, 1, 100);
+		// set GO bit to trigger vibration
 		i2c_write_buffer[0] = 0x01;
 		HAL_I2C_Mem_Write(&hi2c1, 0b10110100, 0x0C, 1, i2c_write_buffer, 1, 100);
 	}
