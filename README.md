@@ -30,4 +30,4 @@ The calibration procedure requires setting some register values related to the s
 
 ## References
 - [DRV2506L Datasheet](https://www.ti.com/lit/gpn/drv2605l)
-- ![](waveform.jpg)
+- Waveform tested with this hardware setup ![Waveform tested with this hardware setup](waveform.jpg)
